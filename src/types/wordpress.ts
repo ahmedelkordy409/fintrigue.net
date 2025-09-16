@@ -26,10 +26,17 @@ export interface WordPressPost {
   sticky: boolean;
   template: string;
   format: string;
-  meta: any;
+  meta: Record<string, unknown>;
   categories: number[];
   tags: number[];
-  _links: any;
+  _links: Record<string, unknown>;
+  // WordPress embeds when using ?_embed=true
+  _embedded?: {
+    'wp:featuredmedia'?: WordPressMedia[];
+    author?: WordPressAuthor[];
+    // The terms array usually contains [categories[], tags[]]
+    'wp:term'?: Array<Array<{ name: string }>>;
+  };
 }
 
 export interface WordPressCategory {
@@ -41,8 +48,8 @@ export interface WordPressCategory {
   slug: string;
   taxonomy: string;
   parent: number;
-  meta: any;
-  _links: any;
+  meta: Record<string, unknown>;
+  _links: Record<string, unknown>;
 }
 
 export interface WordPressTag {
@@ -53,8 +60,8 @@ export interface WordPressTag {
   name: string;
   slug: string;
   taxonomy: string;
-  meta: any;
-  _links: any;
+  meta: Record<string, unknown>;
+  _links: Record<string, unknown>;
 }
 
 export interface WordPressMedia {
@@ -66,6 +73,7 @@ export interface WordPressMedia {
   title: {
     rendered: string;
   };
+  alt_text?: string;
   author: number;
   media_type: string;
   mime_type: string;
@@ -84,7 +92,7 @@ export interface WordPressMedia {
     };
   };
   source_url: string;
-  _links: any;
+  _links: Record<string, unknown>;
 }
 
 export interface WordPressAuthor {
@@ -99,8 +107,8 @@ export interface WordPressAuthor {
     48: string;
     96: string;
   };
-  meta: any;
-  _links: any;
+  meta: Record<string, unknown>;
+  _links: Record<string, unknown>;
 }
 
 export interface NewsArticle {

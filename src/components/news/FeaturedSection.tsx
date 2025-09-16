@@ -34,7 +34,7 @@ export const FeaturedSection = ({ articles, className = '' }: FeaturedSectionPro
 
         {/* Side Articles */}
         <div className="space-y-4">
-          {sideArticles.map((article, index) => (
+          {sideArticles.map((article) => (
             <ArticleCard
               key={article.id}
               article={article}

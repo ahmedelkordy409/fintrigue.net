@@ -117,7 +117,7 @@ const WhistleblowerForm = () => {
       </div>
 
       <p className="text-xs" style={{ color: "#6B7280" }}>
-        By clicking the button "Submit information" you accept our Terms of Submission Whistleblower
+        By clicking the button &quot;Submit information&quot; you accept our Terms of Submission Whistleblower
         Information
       </p>
       <a href="#" className="text-sm" style={{ color: '#2563EB' }}>Read More</a>

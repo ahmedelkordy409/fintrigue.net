@@ -1,4 +1,4 @@
-import { WordPressPost, WordPressCategory, WordPressMedia, WordPressAuthor, NewsArticle } from '@/types/wordpress';
+import { WordPressPost, WordPressCategory, NewsArticle } from '@/types/wordpress';
 
 const WORDPRESS_URL = process.env.NEXT_PUBLIC_WORDPRESS_URL || 'https://your-wordpress-site.com';
 const WP_API_URL = `${WORDPRESS_URL}/wp-json/wp/v2`;
@@ -141,8 +141,8 @@ class WordPressAPI {
         name: author?.name || 'Unknown',
         avatar: author?.avatar_urls?.[96] || '',
       },
-      categories: categories.map((cat: any) => cat.name),
-      tags: tags.map((tag: any) => tag.name),
+      categories: categories.map((cat: { name: string }) => cat.name),
+      tags: tags.map((tag: { name: string }) => tag.name),
       readingTime,
     };
   }
