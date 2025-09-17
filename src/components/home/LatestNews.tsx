@@ -24,11 +24,11 @@ const LatestNews = ({ articles, showHeading = true }: LatestNewsProps) => {
   const sideArticles = articles.slice(1, 4);
 
   return (
-    <section className="py-20" style={{ backgroundColor: 'var(--section-bg)' }}>
-      <div className="container mx-auto px-6 max-w-[1600px]">
+    <section className="py-12 sm:py-16 md:py-20" style={{ backgroundColor: 'var(--section-bg)' }}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
         {showHeading && (
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-6 tracking-wide" style={{ color: '#000000' }}>Latest News</h2>
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 tracking-wide" style={{ color: '#000000' }}>Latest News</h2>
             <div className="w-24 h-px mx-auto" style={{ backgroundColor: '#000000' }}></div>
           </div>
         )}
@@ -97,9 +97,11 @@ const LatestNews = ({ articles, showHeading = true }: LatestNewsProps) => {
 
         {/* View More Button */}
         <div className="text-center">
-          <Button className="mx-auto block w-[720px] h-12 md:h-12 px-0 text-sm font-medium rounded-none shadow-none hover:shadow-none hover:bg-[#2B2B2B] focus-visible:outline-none" style={{ backgroundColor: '#2B2B2B', color: '#FFFFFF' }}>
-            View More Articles
-          </Button>
+          <Link href="/news">
+            <Button className="mx-auto block max-w-[720px] w-full sm:w-auto h-12 md:h-12 px-8 sm:px-16 text-sm font-medium rounded-none shadow-none hover:shadow-none hover:bg-[#2B2B2B] focus-visible:outline-none" style={{ backgroundColor: '#2B2B2B', color: '#FFFFFF' }}>
+              View More Articles
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
