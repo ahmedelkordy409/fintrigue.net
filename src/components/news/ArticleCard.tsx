@@ -168,7 +168,7 @@ export const ArticleCard = ({
   return (
     <Card className={`overflow-hidden hover:shadow-md transition-shadow ${className}`}>
       {showImage && article.featuredImage && (
-        <div className="relative h-48">
+        <div className="relative h-40 sm:h-44 md:h-48">
           <Image
             src={article.featuredImage.url}
             alt={article.featuredImage.alt}
