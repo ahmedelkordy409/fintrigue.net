@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import LatestNews from '@/components/home/LatestNews';
 import Newsletter from '@/components/home/Newsletter';
 import { mockNewsArticles, NewsCategory } from '@/lib/mockNews';

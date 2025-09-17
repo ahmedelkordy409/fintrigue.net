@@ -3,11 +3,10 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Calendar, Clock, User, Share2, ArrowLeft, ChevronRight } from 'lucide-react';
+import { Calendar, Clock, Share2, ArrowLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Separator } from '@/components/ui/separator';
 import Newsletter from '@/components/home/Newsletter';
 import { MockNewsArticle, mockNewsArticles } from '@/lib/mockNews';
 
